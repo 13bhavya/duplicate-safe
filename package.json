@@ -1,0 +1,14 @@
+{
+  "name": "web-bs",
+  "version": "1.0.0",
+  "description": "My Web Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "bhavya",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
