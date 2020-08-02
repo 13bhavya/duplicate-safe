@@ -122,7 +122,7 @@ a {
 }
 
 .nav-link:link {
-    color: cadetblue;
+    color: rgba(26, 44, 58);
 }
 
 .nav-link:hover {
