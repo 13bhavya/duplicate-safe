@@ -1,8 +1,10 @@
 const header = document.getElementById("header");
 const navbar = document.getElementById("navbar");
-const navlink = document.querySelectorAll(".nav-item");
+const navItem = document.querySelectorAll(".nav-item");
+const navLink = document.querySelectorAll(".nav-link")
 
 const navBar = document.getElementById("nav-bar");
+const navbarCollapse = document.getElementById("navbarSupportedContent")
 
 const menuBtn = document.querySelector(".menu-btn");
 const headerVar = document.getElementById("header");
@@ -33,16 +35,16 @@ const sectionObserver = new IntersectionObserver(function (
         if (!entry.isIntersecting) {
             navbar.classList.add("bg-dark")
             navbar.classList.remove("navbar")
-            for (var i = 0; i < navlink.length; i++) {
-                navlink[i].classList.add("nav-link-scrolled")
-                navlink[i].classList.remove("nav-color")
+            for (var i = 0; i < navItem.length; i++) {
+                navItem[i].classList.add("nav-link-scrolled")
+                navItem[i].classList.remove("nav-color")
             }
         } else {
             navbar.classList.add("navbar")
             navbar.classList.remove("bg-dark")
-            for (var i = 0; i < navlink.length; i++) {
-                navlink[i].classList.add("nav-color")
-                navlink[i].classList.remove("nav-link-scrolled")
+            for (var i = 0; i < navItem.length; i++) {
+                navItem[i].classList.add("nav-color")
+                navItem[i].classList.remove("nav-link-scrolled")
             }
 
         }
@@ -61,6 +63,24 @@ $(document).ready(function () {
             scrollTop: $(this.hash).offset().top
         }, 1000);
     })
+
+    $(function () {
+        $(navLink).click(function () {
+            setTimeout(function () {
+                $(navbarCollapse).collapse('hide');
+                menuBtn.classList.remove("open");
+            }, 1000)
+        })
+    })
+
+    $('a.title-text').mouseover(function () {
+        div = $('#github-icon');
+        div.stop().animate({ visibility: 'visible' }, 150);
+    }).mouseout(function () {
+        div = $('#github-icon');
+        div.stop().animate({ visibility: 'hidden' }, 150);
+
+    });
 })
 
 $(function () {

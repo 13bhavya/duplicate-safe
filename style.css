@@ -1,5 +1,6 @@
 :root {
     --nav-font: 25px;
+    background-color: black;
 }
 
 body {
@@ -10,19 +11,25 @@ body {
     overflow-y: auto;
     width: 100%;
     height: 100%;
+    background-color: black;
 }
 
 .nav-font {
     font-family: Lekton;
     font-size: var(--nav-font);
-    font-weight: thin;
+    font-weight: bold;
+}
+
+.nav-bar-main {
+    position: fixed;
+    z-index: 10;
 }
 
 .navbar {
     padding-bottom: 8px;
     box-shadow: 0px 9px 36px -5px rgba(0, 0, 0, 1);
     background: transparent;
-    transition: background 250ms ease-in;
+    transition: all 250ms ease-in;
 }
 
 .menu-btn {
@@ -78,10 +85,10 @@ body {
 .bg-dark {
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 6px;
+    padding-bottom: 4px;
     background: rgb(204, 117, 4) !important;
-    transition: background 250ms ease-in;
+    transition: all 250ms ease-in;
 }
 
 a {
@@ -140,7 +147,8 @@ a {
 .view {
     min-height: 100vh;
     min-width: 100vw;
-    background-attachment: fixed;
+    position: relative;
+    /* background-attachment: fixed; */
     background-color: rgb(4, 204, 154);
 }
 
@@ -208,7 +216,6 @@ a {
     left: 0;
     bottom: 0;
     height: 2px;
-
     background-color: bisque;
     transition: width 0.6s ease;
 }
@@ -241,7 +248,7 @@ a {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    color: bisque;
+    color: white;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -262,8 +269,49 @@ a {
     overflow: hidden;
 }
 
-.title-box {
+#github-icon {
+    visibility: hidden;
+}
+
+.content {
     color: rgba(26, 44, 58);
+}
+
+
+.title-box {
+    position: relative;
+    color: rgba(26, 44, 58);
+    font-size: 2rem;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.title-box:hover {
+    color: bisque;
+    width: 100%;
+}
+
+.title-box::after,
+.title-box::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: -5%;
+    height: 3px;
+    border-radius: 50%;
+    background-color: bisque;
+    transition: width 0.6s ease;
+}
+
+.title-box:hover::before,
+.title-box:hover::after {
+    width: 100%;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .row-content {
@@ -377,8 +425,8 @@ h4 {
 
 @keyframes fade-In {
     from {
-        background-size: cover;
-        background-image: url('/images/grain\ block.jpg');
+        background: rgb(26, 44, 58);
+        ;
     }
 
     to {
@@ -392,8 +440,7 @@ h4 {
     }
 
     to {
-        background-size: cover;
-        background-image: url('/images/grain\ block.jpg');
+        background: rgb(26, 44, 58);
     }
 }
 
@@ -440,27 +487,87 @@ ul {
 
 @media only screen and (min-width: 768px) and (max-width: 979px) {
     .content {
-        margin-top: 5rem;
+        margin-top: 3rem;
     }
 }
 
 @media only screen and (max-width: 767px) {
 
     /* For mobile phones: */
-    body {
+
+    .menu-btn {
         position: relative;
-        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 40px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        /* border: 3px solid #fff; */
+    }
+
+    .burger-icon {
+        width: 50px;
+        height: 4px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all .5s ease-in-out;
+    }
+
+    .menu-btn .burger-icon::before,
+    .menu-btn .burger-icon::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 35px;
+        height: 4px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+        transition: all .4s ease-in-out;
+    }
+
+    .menu-btn .burger-icon::before {
+        transform: translateY(-14px);
+    }
+
+    .menu-btn .burger-icon::after {
+        transform: translateY(14px);
+    }
+
+    .menu-btn.open .burger-icon::before {
+        transform: scaleX(0.4) translateY(-14px);
+    }
+
+    .menu-btn.open .burger-icon::after {
+        transform: scaleX(0.8) translateY(14px);
+    }
+
+    .left-box {
+        width: 320px;
+        height: 200px;
+        margin: auto;
+        overflow: hidden;
+        border: 2px solid rgba(26, 44, 58);
+        border-radius: 10px;
     }
 
     .right-box {
-        width: 100%;
-        height: 100%;
         overflow: hidden;
-        text-align: center;
     }
 
     .content {
-        margin-top: 5rem;
+        margin-top: 1rem;
+    }
+
+    .list-vertical {
+        display: inline-block;
+        list-style: none;
+        text-align: center;
+        margin: auto;
+        font-size: 1.2rem;
     }
 
     .social-links {
@@ -507,7 +614,7 @@ ul {
     .title-two {
         animation: onPage 0.8s 0.4s ease forwards;
         font-size: 2rem;
-        width: 100%title-text;
+        width: 100%;
         opacity: 0;
     }
 
