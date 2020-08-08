@@ -4,8 +4,11 @@
     --title-two-font: 2.5rem;
     --vertical-font: 1.5rem;
     background-color: black;
+    --primary-color: rgb(26, 44, 58);
+    --secondary-color: white;
+    --bg-color: rgb(4, 204, 154);
+    --line-color: grey;
 
-    --nav-color: rgba(26, 44, 58);
 }
 
 body {
@@ -52,9 +55,8 @@ body {
 .burger-icon {
     width: 50px;
     height: 4px;
-    background: #fff;
+    background: var(--secondary-color);
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
     transition: all .5s ease-in-out;
 }
 
@@ -65,9 +67,8 @@ body {
     left: 0;
     width: 50px;
     height: 4px;
-    background: #fff;
+    background: var(--secondary-color);
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
     transition: all .4s ease-in-out;
 }
 
@@ -92,7 +93,7 @@ body {
     padding-right: 1rem;
     padding-top: 6px;
     padding-bottom: 4px;
-    background: rgba(26, 44, 58) !important;
+    background: var(--primary-color) !important;
     transition: all 250ms ease-in;
 }
 
@@ -102,38 +103,33 @@ a {
 }
 
 .nav-color {
-    color: rgba(26, 44, 58);
+    color: var(--primary-color);
     font-weight: 600;
 }
 
 .nav-link-scrolled {
-    color: white;
+    color: var(--secondary-color);
 }
 
 .nav-link {
     position: relative;
 }
 
-@media (prefers-dark-interface) {
-    :root {
-        --nav-link-color: white;
-        /* --back-color: DarkBlue; */
-    }
+.nav-link:link {
+    color: var(--primary-color);
 }
 
-
-.nav-link:link {
-    color: var(--nav-link-color);
-
+.nav-inverted {
+    color: var(--secondary-color);
 }
 
 .nav-link:hover {
-    color: grey;
+    color: var(--line-color);
     transition: 350ms ease;
 }
 
 .nav-link:active {
-    color: white;
+    color: var(--secondary-color);
     transition: 350ms ease;
 }
 
@@ -145,7 +141,7 @@ a {
     right: 0;
     left: 0;
     height: 3px;
-    background: white;
+    background: var(--secondary-color);
     border-radius: 20%;
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
@@ -164,7 +160,7 @@ a {
     min-width: 100vw;
     position: relative;
     /* background-attachment: fixed; */
-    background-color: rgb(4, 204, 154);
+    background-color: var(--bg-color);
 }
 
 .layout {
@@ -219,7 +215,7 @@ a {
 }
 
 .title-text:hover {
-    color: grey;
+    color: var(--line-color);
 }
 
 .title-text::after,
@@ -230,7 +226,7 @@ a {
     left: 0;
     bottom: 0;
     height: 2px;
-    background-color: grey;
+    background-color: var(--line-color);
     transition: width 0.6s ease;
 }
 
@@ -254,7 +250,7 @@ a {
 }
 
 .arrow-top:hover {
-    color: white;
+    color: var(--secondary-color);
 }
 
 
@@ -267,14 +263,14 @@ a {
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgb(4, 204, 154);
+    background-color: var(--bg-color);
 }
 
 .left-box {
     width: 100%;
     height: 260px;
     overflow: hidden;
-    border: 2px solid rgba(26, 44, 58);
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
 }
 
@@ -289,13 +285,13 @@ a {
 }
 
 .content {
-    color: rgba(26, 44, 58);
+    color: var(--primary-color);
 }
 
 
 .title-box {
     position: relative;
-    color: rgb(26, 44, 58);
+    color: var(--primary-color);
     padding-bottom: 5px;
     font-size: var(--title-font);
     cursor: pointer;
@@ -303,7 +299,7 @@ a {
 }
 
 .title-box:hover {
-    color: grey;
+    color: var(--line-color);
     width: 100%;
 }
 
@@ -315,7 +311,7 @@ a {
     left: 0;
     bottom: 0;
     height: 3px;
-    background-color: grey;
+    background-color: var(--line-color);
     transition: width 0.6s ease;
 }
 
@@ -332,7 +328,7 @@ a {
 .row-content {
     padding-bottom: 5rem;
     margin-bottom: 5rem;
-    border-bottom: 1px dotted rgb(26, 44, 58);
+    border-bottom: 1px dotted var(--primary-color);
 }
 
 .list-vertical {
@@ -376,7 +372,7 @@ h4 {
     min-width: 100vw;
     background-attachment: fixed;
     background-position: center center;
-    background-color: rgb(4, 204, 154);
+    background-color: var(--bg-color);
 }
 
 .contact-resume {
@@ -401,7 +397,7 @@ h4 {
     position: relative;
     height: 420px;
     width: 300px;
-    border: 2px solid rgba(26, 44, 58);
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
 }
 
@@ -411,7 +407,7 @@ h4 {
     height: 50px;
     color: bisque;
     text-align: center;
-    background: rgba(26, 44, 58);
+    background: var(--primary-color);
 }
 
 .social-links {
@@ -423,7 +419,7 @@ h4 {
 }
 
 .social-link .a-style {
-    border: 1px solid white;
+    border: 1px solid var(--secondary-color);
     background: transparent;
     height: 100%;
     padding: 5px;
@@ -433,29 +429,29 @@ h4 {
 }
 
 .social-link:hover .a-style {
-    color: rgb(26, 44, 58);
+    color: var(--primary-color);
     border: 1px solid black;
     animation: fade-In 0.3s forwards;
 }
 
 @keyframes fade-In {
     from {
-        background: rgb(26, 44, 58);
+        background: var(--primary-color);
         ;
     }
 
     to {
-        background: rgb(4, 204, 154);
+        background: var(--bg-color);
     }
 }
 
 @keyframes fade-Out {
     from {
-        background: rgb(4, 204, 154);
+        background: var(--bg-color);
     }
 
     to {
-        background: rgb(26, 44, 58);
+        background: var(--primary-color);
     }
 }
 
@@ -526,7 +522,6 @@ ul {
         height: 4px;
         background: #fff;
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
         transition: all .5s ease-in-out;
     }
 
@@ -537,9 +532,8 @@ ul {
         left: 0;
         width: 35px;
         height: 4px;
-        background: #fff;
+        background: var(--secondary-color);
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
         transition: all .4s ease-in-out;
     }
 
@@ -564,7 +558,7 @@ ul {
         height: 200px;
         margin: auto;
         overflow: hidden;
-        border: 2px solid rgba(26, 44, 58);
+        border: 2px solid var(--primary-color);
         border-radius: 10px;
     }
 
@@ -593,7 +587,7 @@ ul {
     }
 
     .social-link .a-style {
-        border: 1px solid white;
+        border: 1px solid var(--secondary-color);
         background: transparent;
         height: 100%;
         font-size: 0.7rem;
@@ -602,13 +596,13 @@ ul {
     }
 
     .social-link:hover .a-style {
-        color: white;
+        color: var(--secondary-color);
         border: 1px solid burlywood;
         animation: fade-In 0.3s forwards;
     }
 
     .title {
-        color: rgba(26, 44, 58);
+        color: var(--primary-color);
         position: fixed;
         font-weight: 100;
         font-weight: bold;

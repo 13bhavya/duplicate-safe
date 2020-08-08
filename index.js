@@ -34,6 +34,7 @@ const sectionObserver = new IntersectionObserver(function (
         console.log(entry)
         if (!entry.isIntersecting) {
             navbar.classList.add("bg-dark")
+            navbar.classList.add("nav-inverted")
             navbar.classList.remove("navbar")
             for (var i = 0; i < navItem.length; i++) {
                 navItem[i].classList.add("nav-link-scrolled")
@@ -42,6 +43,7 @@ const sectionObserver = new IntersectionObserver(function (
         } else {
             navbar.classList.add("navbar")
             navbar.classList.remove("bg-dark")
+            navbar.classList.remove("nav-inverted")
             for (var i = 0; i < navItem.length; i++) {
                 navItem[i].classList.add("nav-color")
                 navItem[i].classList.remove("nav-link-scrolled")
