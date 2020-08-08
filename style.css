@@ -1,5 +1,8 @@
 :root {
     --nav-font: 25px;
+    --title-font: 2rem;
+    --title-two-font: 2.5rem;
+    --vertical-font: 1.5rem;
     background-color: black;
 }
 
@@ -87,7 +90,7 @@ body {
     padding-right: 1rem;
     padding-top: 6px;
     padding-bottom: 4px;
-    background: rgb(204, 117, 4) !important;
+    background: rgba(26, 44, 58) !important;
     transition: all 250ms ease-in;
 }
 
@@ -114,12 +117,12 @@ a {
 }
 
 .nav-link:hover {
-    color: white;
+    color: grey;
     transition: 350ms ease;
 }
 
 .nav-link:active {
-    color: rgb(202, 137, 52);
+    color: white;
     transition: 350ms ease;
 }
 
@@ -128,9 +131,10 @@ a {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
     right: 0;
-    background: currentColor;
+    left: 0;
+    height: 3px;
+    background: white;
     border-radius: 20%;
     transform: scaleX(0);
     transition: transform 300ms ease-in-out;
@@ -159,7 +163,6 @@ a {
 }
 
 .title {
-    color: rgba(26, 44, 58);
     position: fixed;
     font-weight: 100;
     font-weight: bold;
@@ -190,13 +193,13 @@ a {
 
 .title-two {
     animation: onPage 0.8s 0.4s ease forwards;
-    font-size: 2.5rem;
+    font-size: var(--title-two-font);
     opacity: 0;
 }
 
 .title-text {
     position: relative;
-    font-size: 2rem;
+    font-size: var(--title-font);
     padding-bottom: 5px;
     animation: onPage 0.8s 0.6s ease forwards;
     opacity: 0;
@@ -205,7 +208,7 @@ a {
 }
 
 .title-text:hover {
-    color: bisque;
+    color: grey;
 }
 
 .title-text::after,
@@ -216,7 +219,7 @@ a {
     left: 0;
     bottom: 0;
     height: 2px;
-    background-color: bisque;
+    background-color: grey;
     transition: width 0.6s ease;
 }
 
@@ -248,11 +251,12 @@ a {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    color: white;
+    color: rgb(26, 44, 58);
+    box-shadow: 0px -3px 12px 0px rgba(0, 0, 0, 0.75);
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    background-color: rgb(204, 117, 4);
+    background-color: rgb(4, 204, 154);
 }
 
 .left-box {
@@ -280,14 +284,15 @@ a {
 
 .title-box {
     position: relative;
-    color: rgba(26, 44, 58);
-    font-size: 2rem;
+    color: rgb(26, 44, 58);
+    padding-bottom: 5px;
+    font-size: var(--title-font);
     cursor: pointer;
     text-decoration: none !important;
 }
 
 .title-box:hover {
-    color: bisque;
+    color: grey;
     width: 100%;
 }
 
@@ -297,10 +302,9 @@ a {
     position: absolute;
     width: 0;
     left: 0;
-    bottom: -5%;
+    bottom: 0;
     height: 3px;
-    border-radius: 50%;
-    background-color: bisque;
+    background-color: grey;
     transition: width 0.6s ease;
 }
 
@@ -317,13 +321,13 @@ a {
 .row-content {
     padding-bottom: 5rem;
     margin-bottom: 5rem;
-    border-bottom: 1px dotted bisque;
+    border-bottom: 1px dotted rgb(26, 44, 58);
 }
 
 .list-vertical {
     display: inline-block;
     text-align: left;
-    font-size: 1.5rem;
+    font-size: var(--vertical-font);
     margin-left: 2rem;
 }
 
@@ -346,14 +350,14 @@ h4 {
     transform: scale(1.5);
 }
 
-.icon-git {
+/* .icon-git {
     color: white;
     transition: 0.3s ease;
 }
 
 .icon-git:hover {
     color: rgba(26, 44, 58);
-}
+} */
 
 .contact-page {
     position: relative;
@@ -366,7 +370,7 @@ h4 {
 
 .contact-resume {
     text-align: center;
-    font-size: 2rem;
+    font-size: var(--title-font);
 }
 
 .resume {
@@ -466,7 +470,6 @@ h4 {
 .info-me {
     width: auto;
     height: auto;
-    font-size: 1rem;
     font-weight: 500;
 }
 
@@ -609,6 +612,7 @@ ul {
     .title-one {
         animation: onPage 0.6s ease-in-out;
         margin: 0;
+        font-size: 3rem;
     }
 
     .title-two {
@@ -620,7 +624,7 @@ ul {
 
     .title-text {
         position: relative;
-        font-size: 1rem;
+        font-size: var(--vertical-font);
         padding-bottom: 5px;
         animation: onPage 0.8s 0.6s ease forwards;
         opacity: 0;
