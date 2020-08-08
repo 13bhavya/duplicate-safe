@@ -120,7 +120,7 @@ a {
 }
 
 .nav-inverted {
-    color: burlywood;
+    color: burlywood !important;
 }
 
 .nav-link:hover {
