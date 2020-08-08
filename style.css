@@ -4,6 +4,8 @@
     --title-two-font: 2.5rem;
     --vertical-font: 1.5rem;
     background-color: black;
+
+    --nav-color: rgba(26, 44, 58);
 }
 
 body {
@@ -112,9 +114,16 @@ a {
     position: relative;
 }
 
+@media (prefers-dark-interface) {
+    :root {
+        --nav-link-color: white;
+        /* --back-color: DarkBlue; */
+    }
+}
+
+
 .nav-link:link {
-    color: rgba(26, 44, 58);
-    mix-blend-mode: difference;
+    color: var(--nav-link-color);
 
 }
 
