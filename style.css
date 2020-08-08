@@ -120,7 +120,7 @@ a {
 }
 
 .nav-inverted {
-    color: var(--secondary-color);
+    color: burlywood;
 }
 
 .nav-link:hover {
@@ -407,15 +407,27 @@ h4 {
     height: 50px;
     color: bisque;
     text-align: center;
+    left: 0;
+    right: 0;
     background: var(--primary-color);
+    z-index: 100;
+}
+
+.logo-fade {
+    position: absolute;
+    top: 20%;
+    transform: translate(-13%);
+    left: 5%;
+    width: 5%;
+    height: auto;
 }
 
 .social-links {
+    position: absolute;
     font-family: Lekton;
     list-style: none;
-    justify-content: center;
     margin: 10px auto;
-    width: 100%;
+    right: 5%;
 }
 
 .social-link .a-style {
@@ -423,6 +435,8 @@ h4 {
     background: transparent;
     height: 100%;
     padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 1.2rem;
     text-decoration: none;
     animation: fade-Out 0.3s alternate;
@@ -498,6 +512,15 @@ ul {
 @media only screen and (min-width: 768px) and (max-width: 979px) {
     .content {
         margin-top: 3rem;
+    }
+
+    .logo-fade {
+        position: absolute;
+        top: 25%;
+        transform: translate(-10%);
+        left: 5%;
+        width: 7%;
+        height: auto;
     }
 }
 
@@ -579,11 +602,11 @@ ul {
     }
 
     .social-links {
+        position: absolute;
         font-family: Lekton;
         list-style: none;
-        justify-content: center;
-        margin: 12px auto;
-        width: 100%;
+        margin: 10px auto;
+        right: 5%;
     }
 
     .social-link .a-style {
@@ -634,6 +657,15 @@ ul {
         animation: onPage 0.8s 0.6s ease forwards;
         opacity: 0;
         cursor: pointer;
+    }
+
+    .logo-fade {
+        position: absolute;
+        top: 30%;
+        transform: translate(-20%);
+        left: 5%;
+        width: 10%;
+        height: auto;
     }
 
 }
