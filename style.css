@@ -115,10 +115,6 @@ a {
     position: relative;
 }
 
-.nav-link:link {
-    color: var(--primary-color);
-}
-
 .nav-inverted {
     color: var(--secondary-color);
 }
