@@ -630,7 +630,8 @@ ul {
         text-align: center;
         top: 450px;
         left: 50%;
-        transform: translate(-50%, -280px);
+        width: 100%;
+        transform: translate(-50%, -200px);
     }
 
     .title-one {
