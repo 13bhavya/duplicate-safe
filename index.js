@@ -36,17 +36,19 @@ const sectionObserver = new IntersectionObserver(function (
             navbar.classList.add("bg-dark")
             navbar.classList.remove("navbar")
             for (var i = 0; i < navItem.length; i++) {
-                navItem[i].classList.add("nav-link-scrolled")
+                // navItem[i].classList.add("nav-link-scrolled")
                 navItem[i].classList.add("nav-inverted")
                 navItem[i].classList.remove("nav-color")
+                navItem[i].classList.remove("nav-link")
             }
         } else {
             navbar.classList.add("navbar")
             navbar.classList.remove("bg-dark")
             for (var i = 0; i < navItem.length; i++) {
                 navItem[i].classList.add("nav-color")
+                navItem[i].classList.add("nav-link")
                 navItem[i].classList.remove("nav-inverted")
-                navItem[i].classList.remove("nav-link-scrolled")
+                // navItem[i].classList.remove("nav-link-scrolled")
             }
 
         }
