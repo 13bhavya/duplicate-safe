@@ -132,7 +132,7 @@ a {
 }
 
 .nav-inverted::before,
-.nav-inverted::after{
+.nav-inverted::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -154,7 +154,7 @@ a {
 }
 
 .nav-link:hover {
-    color: var(--line-color);
+    color: var(--primary-color);
     transition: 350ms ease;
 }
 
@@ -429,6 +429,26 @@ h4 {
     width: 300px;
     border: 2px solid var(--primary-color);
     border-radius: 5px;
+    text-decoration: none;
+}
+
+
+.modal-body{
+    height: 50vh;
+}
+
+.resume-frame{
+    object-fit: cover;
+}
+
+.modal-content {
+    position: relative;
+    min-height: 90vh;
+    width: 80vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: transparent;
+    background-color: grey;
 }
 
 .contact-social {
