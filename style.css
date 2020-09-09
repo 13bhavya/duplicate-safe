@@ -451,6 +451,21 @@ h4 {
     background-color: grey;
 }
 
+.loader-remove{
+    position: relative;
+    height: 90vh;
+}
+
+#loader-image {
+    position: relative;
+    top: 30%;
+    z-index: 100;
+}
+
+.modal-remove {
+    display: none;
+}
+
 .contact-social {
     position: absolute;
     width: 100%;

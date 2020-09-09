@@ -1,10 +1,11 @@
 const header = document.getElementById("header");
 const navbar = document.getElementById("navbar");
 const navItem = document.querySelectorAll(".nav-item");
-const navLink = document.querySelectorAll(".nav-link")
+const navLink = document.querySelectorAll(".nav-link");
+const modalShow = document.getElementById("modal-show");
 
 const navBar = document.getElementById("nav-bar");
-const navbarCollapse = document.getElementById("navbarSupportedContent")
+const navbarCollapse = document.getElementById("navbarSupportedContent");
 
 const menuBtn = document.querySelector(".menu-btn");
 const headerVar = document.getElementById("header");
@@ -92,6 +93,12 @@ $(function () {
         $('.imagepreview').attr('src', $(this).find('img').attr('src'));
         $('#screen-modal').modal('show');
     });
+});
+
+$("#frame-load").on('load', function () {
+    console.log('loads until T-2');
+    $('#loading').fadeOut();
+    modalShow.classList.remove("modal-remove");
 });
 
 // hide #back-top first
