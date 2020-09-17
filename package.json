@@ -8,6 +8,7 @@
   "author": "bhavya",
   "license": "ISC",
   "dependencies": {
+    "aos": "^2.3.4",
     "express": "^4.17.1",
     "live-server": "^1.2.1"
   }

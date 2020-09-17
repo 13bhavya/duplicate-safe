@@ -533,7 +533,6 @@ h4 {
 
 .social-link:hover .a-style {
     color: var(--primary-color);
-    font-size: x-large;
     border: 1px solid black;
     animation: fade-In 0.3s forwards;
 }
