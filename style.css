@@ -36,7 +36,7 @@ body {
 .navbar {
     padding-bottom: 8px;
     box-shadow: 0px 9px 36px -5px rgba(0, 0, 0, 1);
-    background: transparent;
+    background: rgba(255, 255, 255, 0.61);
     transition: all 250ms ease-in;
 }
 
@@ -91,9 +91,9 @@ body {
 .bg-dark {
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    background: var(--primary-color) !important;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background:  rgba(23, 41, 53, 0.863) !important;
     transition: all 250ms ease-in;
 }
 
@@ -163,6 +163,17 @@ a {
     transition: 350ms ease;
 }
 
+.nav-link:active::before,
+.nav-link:active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    background: var(--primary-color);
+    border-radius: 20%;
+    transition: transform 300ms ease-in-out;
+}
+
 .nav-link::before,
 .nav-link::after {
     content: "";
@@ -189,8 +200,11 @@ a {
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
-    /* background-attachment: fixed; */
-    background-color: var(--bg-color);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/desk-image.jpg');
+    background-attachment: fixed;
 }
 
 .layout {
@@ -208,6 +222,7 @@ a {
     text-align: center;
     top: 450px;
     left: 50%;
+    color: var(--secondary-color);
     transform: translate(-50%, -180px);
 }
 
@@ -237,6 +252,7 @@ a {
 .title-text {
     position: relative;
     font-size: var(--title-font);
+    padding-left: 10px;
     padding-bottom: 5px;
     animation: onPage 0.8s 0.6s ease forwards;
     opacity: 0;
@@ -245,7 +261,7 @@ a {
 }
 
 .title-text:hover {
-    color: var(--line-color);
+    color: var(--secondary-color);
 }
 
 .title-text::after,
@@ -254,15 +270,18 @@ a {
     position: absolute;
     width: 0;
     left: 0;
+    right: 0;
     bottom: 0;
-    height: 2px;
-    background-color: var(--line-color);
-    transition: width 0.6s ease;
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgba(31, 56, 71, 0.863);
+    transition: width 0.3s ease-in;
+    z-index: -100;
 }
 
 .title-text:hover::before,
 .title-text:hover::after {
-    width: 100%;
+    width: 103%;
     right: 0;
 }
 
@@ -272,28 +291,31 @@ a {
     padding: 8px;
     padding-left: 10px;
     padding-right: 10px;
-    border-radius: 20px;
-    background-color: transparent;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    background-color: rgba(0, 0, 0, 0.75);
     bottom: 7%;
     right: 3%;
-    color: rgb(26, 44, 58);
 }
 
 .arrow-top:hover {
     color: var(--secondary-color);
 }
 
-
 .section {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
-    color: rgb(26, 44, 58);
+    color: var(--secondary-color);
     box-shadow: 0px -3px 12px 0px rgba(0, 0, 0, 0.75);
-    background-position: center center;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    background-color: var(--bg-color);
+    background-image: url('/images/map-image.jpg');
+}
+
+.inside-section {
+    background-color: rgba(31, 56, 71, 0.863);
 }
 
 .left-box {
@@ -307,6 +329,8 @@ a {
 .right-box {
     width: 100%;
     height: 100%;
+    background-color: rgba(26, 44, 58, 0.521);
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -315,13 +339,13 @@ a {
 }
 
 .content {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 
 .title-box {
     position: relative;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     padding-bottom: 5px;
     font-size: var(--title-font);
     cursor: pointer;
@@ -329,7 +353,7 @@ a {
 }
 
 .title-box:hover {
-    color: var(--line-color);
+    color: var(--secondary-color);
     width: 100%;
 }
 
@@ -341,7 +365,7 @@ a {
     left: 0;
     bottom: 0;
     height: 3px;
-    background-color: var(--line-color);
+    background-color: var(--secondary-color);
     transition: width 0.6s ease;
 }
 
@@ -400,9 +424,12 @@ h4 {
     position: relative;
     min-height: 100vh;
     min-width: 100vw;
+    color: var(--secondary-color);
     background-attachment: fixed;
-    background-position: center center;
-    background-color: var(--bg-color);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/images/map-fade-image.jpg');
 }
 
 .contact-resume {
@@ -433,11 +460,11 @@ h4 {
 }
 
 
-.modal-body{
+.modal-body {
     height: 50vh;
 }
 
-.resume-frame{
+.resume-frame {
     object-fit: cover;
 }
 
@@ -451,7 +478,7 @@ h4 {
     background-color: grey;
 }
 
-.loader-remove{
+.loader-remove {
     position: relative;
     height: 90vh;
 }
@@ -520,13 +547,13 @@ h4 {
     }
 
     to {
-        background: var(--bg-color);
+        background: var(--secondary-color);
     }
 }
 
 @keyframes fade-Out {
     from {
-        background: var(--bg-color);
+        background: var(--secondary-color);
     }
 
     to {
@@ -651,6 +678,7 @@ ul {
     }
 
     .right-box {
+        margin-top: 15px;
         overflow: hidden;
     }
 
@@ -684,7 +712,8 @@ ul {
     }
 
     .social-link:hover .a-style {
-        color: var(--secondary-color);
+        color: var(--primary-color);
+        font-size: larger;
         border: 1px solid burlywood;
         animation: fade-In 0.3s forwards;
     }
