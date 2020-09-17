@@ -611,6 +611,12 @@ ul {
         width: 7%;
         height: auto;
     }
+
+    .right-box {
+        background-color: transparent;
+        margin-top: 15px;
+        overflow: hidden;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -675,6 +681,7 @@ ul {
     }
 
     .right-box {
+        background-color: transparent;
         margin-top: 15px;
         overflow: hidden;
     }
