@@ -1,4 +1,4 @@
-const header = document.getElementById("header");
+const header = document.getElementById("home");
 const navbar = document.getElementById("navbar");
 const navItem = document.querySelectorAll(".nav-item");
 const navLink = document.querySelectorAll(".nav-link");
@@ -24,7 +24,7 @@ menuBtn.addEventListener('click', () => {
 })
 
 const sectionOneOption = {
-    rootMargin: "600px 0px 0px 0px"
+    rootMargin: "-50px 0px 0px 0px"
 }
 
 //change navbar properties on slide down

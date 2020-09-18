@@ -20,6 +20,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: black;
+    scroll-behavior: auto;
 }
 
 .nav-font {
@@ -425,7 +426,7 @@ h4 {
     background-attachment: fixed;
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover ;
     background-image: url('/images/map-fade-image.jpg');
 }
 
@@ -696,6 +697,18 @@ ul {
         text-align: center;
         margin: auto;
         font-size: 1.2rem;
+    }
+
+    .contact-page {
+        position: relative;
+        min-height: 100vh;
+        min-width: 100vw;
+        color: var(--secondary-color);
+        background-attachment: fixed;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: contain ;
+        background-image: url('/images/map-fade-image.jpg');
     }
 
     .social-links {
