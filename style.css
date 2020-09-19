@@ -31,7 +31,7 @@ body {
 
 .nav-bar-main {
     position: fixed;
-    z-index: 10;
+    z-index: 100;
 }
 
 .navbar {
@@ -222,6 +222,7 @@ a {
     left: 50%;
     color: var(--secondary-color);
     transform: translate(-50%, -180px);
+    z-index: 0;
 }
 
 @keyframes onPage {
@@ -274,7 +275,7 @@ a {
     border-radius: 4px;
     background-color: rgba(31, 56, 71, 0.863);
     transition: width 0.3s ease-in;
-    z-index: -100;
+    z-index: -10;
 }
 
 .title-text:hover::before,
@@ -309,7 +310,9 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     background-image: url('/images/map-image.jpg');
+    z-index: 20;
 }
 
 .inside-section {
@@ -380,7 +383,7 @@ a {
 .row-content {
     padding-bottom: 5rem;
     margin-bottom: 5rem;
-    border-bottom: 1px dotted var(--primary-color);
+    border-bottom: 1px dotted var(--secondary-color);
 }
 
 .list-vertical {
@@ -426,8 +429,9 @@ h4 {
     background-attachment: fixed;
     background-position: bottom center;
     background-repeat: no-repeat;
-    background-size: cover ;
+    background-size: cover;
     background-image: url('/images/map-fade-image.jpg');
+    z-index: 30;
 }
 
 .contact-resume {
@@ -624,6 +628,16 @@ ul {
 
     /* For mobile phones: */
 
+    /* debug */
+    .view {
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url('/images/desk-image.jpg');
+        background-attachment: fixed;
+    }
+
     .menu-btn {
         position: relative;
         display: flex;
@@ -672,6 +686,20 @@ ul {
         transform: scaleX(0.8) translateY(14px);
     }
 
+    .section {
+        position: relative;
+        min-height: 100vh;
+        min-width: 100vw;
+        color: var(--secondary-color);
+        box-shadow: 0px -3px 12px 0px rgba(0, 0, 0, 0.75);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-image: url('/images/map-image.jpg');
+        z-index: 20;
+    }
+
     .left-box {
         width: 320px;
         height: 200px;
@@ -699,17 +727,17 @@ ul {
         font-size: 1.2rem;
     }
 
-    /* .contact-page {
+    .contact-page {
         position: relative;
         min-height: 100vh;
         min-width: 100vw;
         color: var(--secondary-color);
         background-attachment: fixed;
-        background-position: bottom center;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: contain ;
         background-image: url('/images/map-fade-image.jpg');
-    } */
+    }
 
     .social-links {
         position: absolute;
