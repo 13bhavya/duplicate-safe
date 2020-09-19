@@ -735,7 +735,7 @@ ul {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain ;
+        background-size: cover ;
         background-image: url('/images/map-fade-image.jpg');
     }
 
