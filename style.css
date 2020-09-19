@@ -699,7 +699,7 @@ ul {
         font-size: 1.2rem;
     }
 
-    .contact-page {
+    /* .contact-page {
         position: relative;
         min-height: 100vh;
         min-width: 100vw;
@@ -709,7 +709,7 @@ ul {
         background-repeat: no-repeat;
         background-size: contain ;
         background-image: url('/images/map-fade-image.jpg');
-    }
+    } */
 
     .social-links {
         position: absolute;
