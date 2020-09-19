@@ -29,16 +29,17 @@ body {
     font-weight: bold;
 }
 
-.nav-bar-main {
+/* .nav-bar-main {
     position: fixed;
     z-index: 100;
-}
+} */
 
 .navbar {
     padding-bottom: 4px;
     box-shadow: 0px 9px 36px -5px rgba(0, 0, 0, 1);
     background: rgba(255, 255, 255, 0.61);
     transition: all 250ms ease-in;
+    z-index: 40;
 }
 
 .menu-btn {
@@ -96,6 +97,7 @@ body {
     padding-bottom: 8px;
     background: rgba(23, 41, 53, 0.863) !important;
     transition: all 250ms ease-in;
+    z-index: 40;
 }
 
 a {
@@ -285,7 +287,7 @@ a {
 }
 
 .to-top {
-    z-index: 100;
+    z-index: 50;
     position: fixed;
     padding: 8px;
     padding-left: 10px;
@@ -461,6 +463,11 @@ h4 {
     text-decoration: none;
 }
 
+/* debug */
+/* .modal{
+    position: fixed;
+    z-index: 45;
+} */
 
 .modal-body {
     height: 50vh;
@@ -471,13 +478,14 @@ h4 {
 }
 
 .modal-content {
-    position: relative;
+    position: fixed;
     min-height: 90vh;
     width: 80vw;
+    top: 22%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -15%);
     border: transparent;
-    background-color: grey;
+    background-color: white;
 }
 
 .loader-remove {
@@ -735,7 +743,7 @@ ul {
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover ;
+        background-size: cover;
         background-image: url('/images/map-fade-image.jpg');
     }
 
