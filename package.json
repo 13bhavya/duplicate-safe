@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "description": "My Web Portfolio",
   "scripts": {
-    "start": "node server.js"
+    "start": "gulp"
   },
   "author": "bhavya",
   "license": "ISC",
   "dependencies": {
     "aos": "^2.3.4",
-    "live-server": "^1.2.1"
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "gulp-concat": "^2.6.1",
+    "gulp-postcss": "^8.0.0",
+    "live-server": "^1.2.1",
+    "postcss": "^8.0.6"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.0",
-    "gulp-postcss": "^8.0.0",
+    "gulp": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5"
   }
 }
